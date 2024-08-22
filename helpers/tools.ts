@@ -8,11 +8,13 @@ export async function getGeoCoordinates(
   const response = await fetch(url);
 
   if (!response.ok) {
+    console.error("🚀 ~ getGeoCoordinates ~ Failed to fetch geo coordinates");
     throw new Error("Failed to fetch geo coordinates");
   }
 
   const data = await response.json();
   if (data.length === 0) {
+    console.error("🚀 ~ getGeoCoordinates ~ City not found");
     throw new Error("City not found");
   }
 
