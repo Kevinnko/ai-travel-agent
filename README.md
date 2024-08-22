@@ -1,50 +1,148 @@
-# Welcome to your Expo app 👋
+# AI Travel Agent
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This project is a small AI travel agent application, developed as part of the Scrimba AI Engineer Path courses. The app helps users plan their trips by providing weather information, flight details, and hotel recommendations based on the user's input.
 
-## Get started
+## Table of Contents
 
-1. Install dependencies
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Installation](#installation)
+- [Setup](#setup)
+- [API Keys](#api-keys)
+- [Usage](#usage)
+- [Running the App](#running-the-app)
+- [Screenshots](#screenshots)
+- [Future Enhancements](#future-enhancements)
+- [License](#license)
 
-   ```bash
+## Features
+
+- Get weather information for the destination.
+- Generate realistic flight and hotel data based on the itinerary and budget.
+- User-friendly interface for inputting trip details.
+
+## Tech Stack
+
+- **Frontend:** React Native, Expo
+- **Backend:** Expo Router API
+- **AI:** OpenAI API
+- **State Management:** React Context API
+
+## Installation
+
+1. Clone the repository:
+
+   ```sh
+   git clone https://github.com/Kevinnko/ai-travel-agent.git
+   cd ai-travel-agent
+   ```
+
+2. Install the dependencies using npm:
+
+   ```sh
    npm install
    ```
 
-2. Start the app
+   Or using yarn:
 
-   ```bash
-    npx expo start
+   ```sh
+   yarn install
    ```
 
-In the output, you'll find options to open the app in a
+## Setup
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+1. Create a `.env` file in the root directory and add your API keys:
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+   ```env
+   OPENAI_API_KEY=your_openai_api_key
+   WEATHER_API_KEY=your_weather_api_key
+   WEATHER_API_URL=https://api.openweathermap.org
+   ```
 
-## Get a fresh project
+2. Start the development server:
 
-When you're ready, run:
+   ```sh
+   npm start
+   ```
 
-```bash
-npm run reset-project
-```
+   Or using yarn:
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+   ```sh
+   yarn start
+   ```
 
-## Learn more
+## API Keys
 
-To learn more about developing your project with Expo, look at the following resources:
+You will need to obtain the following API keys:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+- **OpenAI API Key:** Sign up at [OpenAI](https://auth.openai.com/authorize) and get your API key.
+- **Weather API Key:** Sign up at [OpenWeather](https://openweathermap.org/api) and get your API key.
 
-## Join the community
+## Usage
 
-Join our community of developers creating universal apps.
+1. Open the app on your device or simulator.
+2. Enter the trip details including the departure and destination locations, dates, budget, and number of passengers.
+3. Click on "Plan my trip!" to get the weather, flights, and hotels information.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## Running the App
+
+You can run the app on different platforms using Expo. Here are the steps:
+
+### Running on iOS
+
+1. Make sure you have Xcode installed on your Mac.
+2. Start the development server:
+   ```sh
+   npm start
+   ```
+   Or using yarn:
+   ```sh
+   yarn start
+   ```
+3. Press `i` to open the app in the iOS simulator.
+
+### Running on Android
+
+1. Make sure you have Android Studio installed and set up on your machine.
+2. Start the development server:
+   ```sh
+   npm start
+   ```
+   Or using yarn:
+   ```sh
+   yarn start
+   ```
+3. Press `a` to open the app in the Android emulator.
+
+### Running on Web
+
+1. Start the development server:
+   ```sh
+   npm start
+   ```
+   Or using yarn:
+   ```sh
+   yarn start
+   ```
+2. Press `w` to open the app in your default web browser.
+
+For more detailed instructions, refer to the [Expo documentation](https://docs.expo.dev/get-started/installation/).
+
+## Screenshots
+
+![Home Screen](assets/images/homescreen.png)
+![Planner Screen](assets/images/form.png)
+![Trip Screen](assets/images/trip.png)
+
+## Future Enhancements
+
+Here are some features that could be added to enhance the app:
+
+- [ ] Get real flights and hotels data with Skyscanner, Booking, or other APIs.
+- [ ] Add a list of activity ideas for the destination.
+- [ ] Make the trip page shareable.
+- [ ] Add AI-generated images for the trip.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
